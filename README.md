@@ -39,10 +39,12 @@ http://localhost:8080/fighters
 ###  POST
 
 
+<img width="1918" height="1026" alt="POST" src="https://github.com/user-attachments/assets/af6a5534-c1e4-4df6-a8be-207cadd9577a" />
 
 ---
 
 ###  GET (todos)
+<img width="1915" height="1026" alt="GET TODOS" src="https://github.com/user-attachments/assets/6373b59e-81b5-455e-afb6-4099f7b37bdf" />
 
 
 ---
@@ -50,28 +52,32 @@ http://localhost:8080/fighters
 ###  GET (por ID)
 
 
+<img width="1907" height="1028" alt="GET ID" src="https://github.com/user-attachments/assets/259c22dc-c2ec-4c6d-a90c-d70859ea9e4c" />
 
 ---
 
 ### PUT
 
+<img width="1917" height="1025" alt="PUT" src="https://github.com/user-attachments/assets/6afbc656-7408-4407-a8cc-91381f25ea47" />
 
 
 ---
 
 ###  PATCH
 
-*(Agregar captura aquí)*
+
 
 ---
 
 ###  DELETE
 
+<img width="1918" height="1006" alt="DELETE" src="https://github.com/user-attachments/assets/09151fd6-6690-4c33-b6ee-7e2405282f08" />
 
 ---
 
 ###  Error 400 (Bad Request)
 
+<img width="1918" height="1000" alt="ERROR 404" src="https://github.com/user-attachments/assets/78d82cb9-a601-4f63-8df5-c0830fa1c02e" />
 
 ---
 
