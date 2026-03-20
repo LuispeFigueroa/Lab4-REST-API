@@ -18,21 +18,9 @@ app.use("/fighters", routes);
 await connectWithRetry();
 
 
-// crear tabla si no existe
-await pool.query(`
-  CREATE TABLE IF NOT EXISTS fighters (
-    id SERIAL PRIMARY KEY,
-    campo1 TEXT NOT NULL,
-    campo2 TEXT NOT NULL,
-    campo3 TEXT NOT NULL,
-    campo4 INTEGER NOT NULL,
-    campo5 REAL NOT NULL,
-    campo6 BOOLEAN NOT NULL
-  )
-`);
+// usar puerto desde .env
+const PORT = process.env.APP_PORT || 8080;
 
-
-// levantar servidor
-app.listen(8080, () => {
-    console.log("🚀 Server running on port 8080");
+app.listen(PORT, () => {
+    console.log(` Server running on port ${PORT}`);
 }); 
