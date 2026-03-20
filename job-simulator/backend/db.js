@@ -1,27 +1,26 @@
-
-// pool se encarga de manejar la conexión a la base de datos
 import pkg from 'pg';
 const { Pool } = pkg;
 
-// importamos dotenv para que lea mi archivo .env
 import dotenv from 'dotenv';
 dotenv.config();
 
-//usando las variables de entorno creamos la conexion
 export const pool = new Pool({
-    connectionString: process.env.DATABASE_URL
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    database: process.env.DB_NAME,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD
 });
-
-//funcion para esperar a que la base de datos este lista
+//funcion para esperar a la conexion con la DB
 export const connectWithRetry = async () => {
     while (true) {
         try {
             await pool.query("SELECT 1");
-            console.log("Conexión a la base de datos exitosa");
+            console.log("✅ DB connected");
+            break;
         } catch (err) {
-            console.log("Esperando conexion con la base de datos...");
-            //reintentar cada 2 segundos
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            console.log("⏳ Waiting for DB...");
+            await new Promise(res => setTimeout(res, 2000));
         }
     }
 };
